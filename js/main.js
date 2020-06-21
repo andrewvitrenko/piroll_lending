@@ -26,6 +26,10 @@ $(window).ready(function () {
 
         if ($(window).width() >= 768) {
             button__container.css('height', button__container.outerWidth() / 1366 * 113)
+            $('.nav').removeClass('visible')
+            $('.burger').removeClass('active')
+            $('html, body').removeClass('locked')
+            $('.nav').css('padding-top', '')
         }
         else {
             button__container.css('height', button__container.outerWidth() / 320 * 40)
@@ -38,11 +42,11 @@ $(window).ready(function () {
             banner.css('height', banner.outerWidth() / 320 * 200)
         }
 
-        if ($(window).width() > 767) {
-            $('.nav').removeClass('visible')
-            $('.burger').removeClass('active')
-            $('html, body').removeClass('locked')
-            $('.nav').css('padding-top', '')
+        if ($(window).width() > 499) {
+            $('.nav').css('height', '')
+        }
+        else {
+            $('.nav').css('height', $('.banner').outerHeight())
         }
     })
 })
@@ -120,7 +124,7 @@ $('.burger').click(function() {
     if ($('.nav').hasClass('visible')) {
         $('.nav').css('padding-top', $('header').outerHeight())
 
-        if ($(window).width() >= 499) {
+        if ($(window).width() > 499) {
             $('.nav').css('height', '')
         }
         else {
