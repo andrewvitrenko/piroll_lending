@@ -37,6 +37,13 @@ $(window).ready(function () {
         else {
             banner.css('height', banner.outerWidth() / 320 * 200)
         }
+
+        if ($(window).width() > 767) {
+            $('.nav').removeClass('visible')
+            $('.burger').removeClass('active')
+            $('html, body').removeClass('locked')
+            $('.nav').css('padding-top', '')
+        }
     })
 })
 
@@ -113,9 +120,6 @@ $('.burger').click(function() {
     if ($('.nav').hasClass('visible')) {
         $('.nav').css('padding-top', $('header').outerHeight())
 
-        $('.burger.active').css('height', '23px')
-        $('.burger.active').css('width', '23px')
-
         if ($(window).width() >= 499) {
             $('.nav').css('height', '')
         }
@@ -126,9 +130,6 @@ $('.burger').click(function() {
     else {
         $('.nav').css('padding-top', '0')
         $('.nav').css('height', '0')
-
-        $('.burger').css('height', '')
-        $('.burger').css('width', '')
     }
 })
 
