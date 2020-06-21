@@ -606,6 +606,10 @@ footer {
     display: block;
 }
 
+.social-network:not(:last-child), .info__link:not(:last-child), .useful-link:not(:last-child) {
+    margin-bottom: 10%;
+}
+
 @media all and (max-width: 937px) {
     .statistic__elem {
         margin: 5%;
@@ -752,6 +756,13 @@ footer {
 
     br {
         display: none;
+    }
+}
+
+@media all and (max-width: 742px) {
+    footer {
+        padding-right: 2%;
+        padding-left: 2%;
     }
 }
 
