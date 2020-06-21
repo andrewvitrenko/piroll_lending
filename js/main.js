@@ -108,17 +108,26 @@ function navHandler(scrollTop) {
 $('.burger').click(function() {
     $(this).toggleClass('active')
     $('.nav').toggleClass('visible')
-    $('header').toggleClass('opened')
+    $('html, body').toggleClass('locked')
 
     if ($('.nav').hasClass('visible')) {
         $('.nav').css('padding-top', $('header').outerHeight())
+        $('.nav').css('height', '');
 
-        if ($(window).width() <= 499) {
-            $('.nav').css('height', $('.banner').outerHeight())
-        }
+        $('.burger.active').css('height', '23px')
+        $('.burger.active').css('width', '23px')
     }
     else {
         $('.nav').css('padding-top', '0')
         $('.nav').css('height', '0')
+
+        $('.burger').css('height', '')
+        $('.burger').css('width', '')
     }
+})
+
+$('.nav__link').click(function() {
+    $('.nav').removeClass('visible')
+    $('.burger').removeClass('active')
+    $('html, body').removeClass('locked')
 })

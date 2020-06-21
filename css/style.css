@@ -10,6 +10,10 @@ body {
     line-height: calc(9/12);
 }
 
+.locked {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -50,7 +54,7 @@ header {
     justify-content: center;
 }
 
-.nav__item a {
+.nav__link {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -97,7 +101,6 @@ header {
 }
 
 .banner__title {
-    /* font-size: 38px; */
     font-size: calc(22px + 16 * ((100vw - 320px) / 1046));
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -106,7 +109,6 @@ header {
 }
 
 .banner__description {
-    /* font-size: 18px; */
     font-size: calc(12px + 6 * ((100vw - 320px) / 1046));
     line-height: 1.5;
     font-family: 'Nunito Sans', sans-serif;
@@ -143,7 +145,6 @@ header {
 .text {
     color: #787878;
     font-family: 'Nunito Sans', sans-serif;
-    /* font-size: 16px; */
     font-size: calc(14px + 2 * ((100vw - 320px) / 1046));
     line-height: 1.5;
     margin-top: 0;
@@ -640,7 +641,7 @@ footer {
         min-width: 0;
     }
 
-    .nav__item a {
+    .nav__link {
         font-size: 0;
         transition: font-size 0.5s ease-in-out;
     }
@@ -660,6 +661,7 @@ footer {
         height: 20px;
         width: 30px;
         margin-left: auto;
+        transition: all 0.5s ease-in-out;
     }
 
     .burger::before,
@@ -667,9 +669,10 @@ footer {
         content: '';
         position: absolute;
         background-color: #191919;
-        width: 100%;
+        width: 30px;
         height: 2px;
         transition: all 0.5s ease-in-out;
+        transform-origin: top left;
     }
     
     .burger::before {
@@ -683,7 +686,7 @@ footer {
     .burger span {
         background-color: #191919;
         position: absolute;
-        width: 100%;
+        width: 30px;
         display: block;
         top: 50%;
         margin-top: -1px;
@@ -692,15 +695,15 @@ footer {
     }
 
     .burger.active::before {
-        transform: rotate(135deg);
-        top: 9px;
+        transform: rotate(405deg);
+        transform-origin: top left;
         background-color: #dd4b2b;
     }
     
     .burger.active::after {
-        bottom: 9px;
-        transform: rotate(45deg);
+        transform: rotate(315deg);
         background-color: #dd4b2b;
+        transform-origin: top left;
     }
     
     .burger.active span {
@@ -744,8 +747,6 @@ footer {
     }
 
     footer {
-        /*padding-top: 5%;
-        padding-bottom: 5%;*/
         padding: 5%;
     }
 
@@ -774,7 +775,6 @@ footer {
     }
 
     .emblem {
-        /*margin-left: 10%;*/
         margin-bottom: 5%;
         flex-basis: 50%;
     }
