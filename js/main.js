@@ -112,10 +112,16 @@ $('.burger').click(function() {
 
     if ($('.nav').hasClass('visible')) {
         $('.nav').css('padding-top', $('header').outerHeight())
-        $('.nav').css('height', '');
 
         $('.burger.active').css('height', '23px')
         $('.burger.active').css('width', '23px')
+
+        if ($(window).width() >= 499) {
+            $('.nav').css('height', '')
+        }
+        else {
+            $('.nav').css('height', $('.banner').outerHeight())
+        }
     }
     else {
         $('.nav').css('padding-top', '0')
