@@ -1,3 +1,6 @@
+const ACTIVE_LINK_COLOR = '#10c9c3';
+const PRIMARY_LINK_COLOR = '#191919';
+
 $(window).ready(function () {
   const banner = $('.banner');
   const button__container = $('.button__container');
@@ -93,26 +96,26 @@ function navHandler(scrollTop) {
   const footerTop = $('footer').offset().top - headerHeight;
 
   if (scrollTop <= aboutTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(1)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(1)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= worksTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(2)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(2)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= processTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(3)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(3)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= servicesTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(4)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(4)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= testimonalsTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(5)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(5)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= contactTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(6)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(6)').css('color', ACTIVE_LINK_COLOR);
   } else if (scrollTop <= footerTop) {
-    $('.nav__item').css('color', '#191919');
-    $('.nav__item:nth-child(7)').css('color', '#10c9c3');
+    $('.nav__item').css('color', PRIMARY_LINK_COLOR);
+    $('.nav__item:nth-child(7)').css('color', ACTIVE_LINK_COLOR);
   }
 }
 
